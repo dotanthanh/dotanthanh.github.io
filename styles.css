@@ -12,10 +12,9 @@ div.remark-slide-content {
     padding: 2em 5em;
 }
 
-h1 div.logo {
-    background: url('logo.svg');
-    width: 75px;
-    height: 75px;
+img {
+    max-width: 75px;
+    max-height: 75px;
 }
 
 h1, h2, h3 {
