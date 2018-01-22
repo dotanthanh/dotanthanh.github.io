@@ -1,78 +1,149 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Title</title>
+
+<head>
+    <title>Cloudinary API</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="styles.css"/>
-  </head>
-  <body>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<body>
     <textarea id="source">
 
 class: center, middle
-
-# Title
+# Cloudinary API
 
 ---
 
-# Agenda
+## Table of contents
 
 1. Introduction
-2. Deep-dive
-3. ...
+2. API and utilities examples
+3. Application example
 
 ---
 
 # Introduction
 
+<h3>What is Cloudinary ?</h3>
+
+<p>
+    Cloudinary is a cloud service. It provides SaaS (Software-as-a-Service) solution to manage your application's
+    media assets on the cloud. It can handle high load of traffic and offers many services
+    to store, manipulate and deliver for data.
+</p>
+
+<p>
+    Cloudinary's solutions include Management Console and API delivered through CDNs (Content Delivery Network).
+</p>
+
+---
+
+# API
+
+<p>
+    Cloudinary API provides different functionalities for an end-to-end media management solutions.
+</p>
+<ul>
+    <li>Media upload</li>
+    <li>Media delivery</li>
+    <li>Media transformation</li>
+</ul>
+
+---
+
+# Media upload
+<p>
+    Authentication based on parameters:
+    <ul>
+        <li><b>cloud_name</b></li>
+        <li><b>api_key</b></li>
+        <li><b>api_secret</b></li>
+    </ul>
+</p>
+<p>
+    Provided methods:
+    <ul>
+        <li><b>Upload</b></li>
+        <li><b>Rename</b></li>
+        <li><b>Destroy</b></li>
+        <li><b>etc ...</b></li>
+    </ul>
+</p>
+
+---
+
+## example
+<p>Uploading an image :</p>
+<pre>
+cloudinary.v2.uploader.upload("http://www.example.com/sample.jpg",
+    function(result) {
+        console.log(result);
+    });
+</pre>
+<p>Uploading a video :</p>
+<pre>
+cloudinary.v2.uploader.upload("dog.mp4",
+    { resource_type: "video" }, function(result)
+        {console.log(result);
+    });
+</pre>
+
+---
+
+# Media delivery
+<p>
+    Uploaded images will be assigned unique Public IDs. They can then to used in URL-safe string
+    to reference the desired image.
+</p>
+<h3>Example</h3>
+<pre>
+https://res.cloudinary.com/demo/image/upload/8jsb1xofxdqamu2rzwt9q.jpg
+</pre>
+<br />
+<p>
+    Where <strong>8jsb1xofxdqamu2rzwt9q</strong> is the image's Public Id.
+</p>
+
+---
+
+# Media transformation
+<p>
+    Media assets can be processed to fit the design of the application.
+    For example, functionalities like cropping, filters, resizing are available.
+</p>
+<h3>example</h3>
+<p>
+    Rotate an image by 90 degree
+<pre>
+    cl.imageTag('sample.jpg', {
+        transformation: [
+            {width: 100, crop: "scale"},
+            {angle: 90}
+        ]
+    }).toHtml();
+</pre>
+</p>
+
+---
+
+# Application example
+<ul>
+    <li>Any.do: https://www.any.do/</li>
+    <li>EatWith: https://www.eatwith.com/</li>
+</ul>
+
+---
+
+# Thank you for your attention !
+
     </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js">
     </script>
     <script>
-      var slideshow = remark.create();
+        var slideshow = remark.create();
     </script>
-  </body>
-</html><!DOCTYPE html>
-<html>
-  <head>
-    <title>Title</title>
-    <meta charset="utf-8">
-    <style>
-      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
-      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
-      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+</body>
 
-      body { font-family: 'Droid Serif'; }
-      h1, h2, h3 {
-        font-family: 'Yanone Kaffeesatz';
-        font-weight: normal;
-      }
-      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
-    </style>
-  </head>
-  <body>
-    <textarea id="source">
-
-class: center, middle
-
-# Title
-
----
-
-# Agenda
-
-1. Introduction
-2. Deep-dive
-3. ...
-
----
-
-# Introduction
-
-    </textarea>
-    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
-    </script>
-    <script>
-      var slideshow = remark.create();
-    </script>
-  </body>
 </html>

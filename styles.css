@@ -1,10 +1,37 @@
-@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
-@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
-@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono|Source+Code+Pro');
 
-body { font-family: 'Droid Serif'; }
-h1, h2, h3 {
-  font-family: 'Yanone Kaffeesatz';
-  font-weight: normal;
+body {
+    font-family: 'Open Sans', 'san-serif';
+    letter-spacing: 1px;
+    line-height: 30px;
 }
-.remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+div.remark-slide-content {
+    background: url('pattern.svg');
+    padding: 2em 5em;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  color: rgb(70,70,70);
+  line-height: 60px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+pre {
+    font-family: 'Source Code Pro', 'monospace';
+    letter-spacing: normal;
+    background: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+ol li {
+    margin: 20px 0px;
+}
