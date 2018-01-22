@@ -4,7 +4,7 @@
 <head>
     <title>Cloudinary API</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 
@@ -18,6 +18,9 @@ class: center, middle
 
 ## Table of contents
 
+<br />
+<br />
+
 1. Introduction
 2. API and utilities examples
 3. Application example
@@ -29,12 +32,14 @@ class: center, middle
 <h3>What is Cloudinary ?</h3>
 
 <p>
+    <span class='glyphicon glyphicon-triangle-right'></span>
     Cloudinary is a cloud service. It provides SaaS (Software-as-a-Service) solution to manage your application's
     media assets on the cloud. It can handle high load of traffic and offers many services
     to store, manipulate and deliver for data.
 </p>
 
 <p>
+    <span class='glyphicon glyphicon-triangle-right'></span>
     Cloudinary's solutions include Management Console and API delivered through CDNs (Content Delivery Network).
 </p>
 
@@ -43,6 +48,7 @@ class: center, middle
 # API
 
 <p>
+    <span class='glyphicon glyphicon-triangle-right'></span>
     Cloudinary API provides different functionalities for an end-to-end media management solutions.
 </p>
 <ul>
@@ -55,6 +61,7 @@ class: center, middle
 
 # Media upload
 <p>
+    <span class='glyphicon glyphicon-triangle-right'></span>
     Authentication based on parameters:
     <ul>
         <li><b>cloud_name</b></li>
@@ -63,6 +70,7 @@ class: center, middle
     </ul>
 </p>
 <p>
+    <span class='glyphicon glyphicon-triangle-right'></span>
     Provided methods:
     <ul>
         <li><b>Upload</b></li>
@@ -74,15 +82,23 @@ class: center, middle
 
 ---
 
-## example
-<p>Uploading an image :</p>
+### Example
+<br />
+<p>
+    <span class='glyphicon glyphicon-triangle-right'></span>
+    Uploading an image :
+</p>
 <pre>
 cloudinary.v2.uploader.upload("http://www.example.com/sample.jpg",
     function(result) {
         console.log(result);
     });
 </pre>
-<p>Uploading a video :</p>
+<br />
+<p>
+    <span class='glyphicon glyphicon-triangle-right'></span>
+    Uploading a video :
+</p>
 <pre>
 cloudinary.v2.uploader.upload("dog.mp4",
     { resource_type: "video" }, function(result)
@@ -94,6 +110,7 @@ cloudinary.v2.uploader.upload("dog.mp4",
 
 # Media delivery
 <p>
+    <span class='glyphicon glyphicon-triangle-right'></span>
     Uploaded images will be assigned unique Public IDs. They can then to used in URL-safe string
     to reference the desired image.
 </p>
@@ -103,6 +120,7 @@ https://res.cloudinary.com/demo/image/upload/8jsb1xofxdqamu2rzwt9q.jpg
 </pre>
 <br />
 <p>
+    <span class='glyphicon glyphicon-arrow-right'></span>
     Where <strong>8jsb1xofxdqamu2rzwt9q</strong> is the image's Public Id.
 </p>
 
@@ -110,11 +128,13 @@ https://res.cloudinary.com/demo/image/upload/8jsb1xofxdqamu2rzwt9q.jpg
 
 # Media transformation
 <p>
+    <span class='glyphicon glyphicon-triangle-right'></span>
     Media assets can be processed to fit the design of the application.
     For example, functionalities like cropping, filters, resizing are available.
 </p>
-<h3>example</h3>
+<h3>Example</h3>
 <p>
+    <span class='glyphicon glyphicon-triangle-right'></span>
     Rotate an image by 90 degree
 <pre>
     cl.imageTag('sample.jpg', {
@@ -129,14 +149,27 @@ https://res.cloudinary.com/demo/image/upload/8jsb1xofxdqamu2rzwt9q.jpg
 ---
 
 # Application example
-<ul>
-    <li>Any.do: https://www.any.do/</li>
-    <li>EatWith: https://www.eatwith.com/</li>
-</ul>
+<p>
+    <span class='glyphicon glyphicon-triangle-right'></span>
+    Some customer of Cloudinary :
+    <br />
+    <br />
+    <ul>
+        <li>
+            <strong>Any.do</strong> :
+            <a src='https://www.any.do/'>https://www.any.do/</a>
+        </li>
+        <li>
+            <strong>EatWith</strong> :
+            <a src='https://www.eatwith.com/'>https://www.eatwith.com/</a>
+        </li>
+    </ul>
+</p>
 
 ---
 
-# Thank you for your attention !
+class: center, middle
+## Thanks for your attention ! <span class='glyphicon glyphicon-thumbs-up'></span>
 
     </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js">
